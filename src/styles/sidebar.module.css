@@ -1,0 +1,53 @@
+.sidebar {
+  padding: 16px;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--background-secondary);
+  transition: background-color var(--transition-speed);
+  color: var(--text-secondary);
+}
+
+.menuItem:hover {
+  background-color: var(--background-secondary);
+}
+
+.menuItem.active {
+  background-color: var(--background-secondary);
+  color: var(--primary-color);
+}
+
+.menuIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.menuText {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 16px 0;
+}
+
+.label {
+  padding: 0 12px;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  font-weight: 600;
+}

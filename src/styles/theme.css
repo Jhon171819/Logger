@@ -1,0 +1,38 @@
+:root {
+  /* Light theme variables */
+  --primary-color: #1890ff;
+  --background-primary: #ffffff;
+  --background-secondary: #f5f5f5;
+  --text-primary: #000000;
+  --text-secondary: #595959;
+  --border-color: #e8e8e8;
+  
+  /* Transitions */
+  --transition-speed: 200ms;
+}
+
+/* Dark theme variables */
+[data-theme='dark'] {
+  --primary-color: #1890ff;
+  --background-primary: #1f2937;
+  --background-secondary: #111827;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --border-color: #374151;
+}
+
+/* Global styles */
+body {
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}

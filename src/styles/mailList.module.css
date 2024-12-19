@@ -1,0 +1,142 @@
+.mailList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  overflow: auto;
+  padding: 16px;
+}
+
+.mailItem {
+  padding: 16px;
+  background-color: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all var(--transition-speed);
+}
+
+.mailItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.mailItem.unread {
+  background-color: var(--background-secondary);
+}
+
+.mailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed);
+}
+
+.mailHeader:hover {
+  background-color: var(--background-secondary);
+}
+
+.mailHeaderLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mailHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.unreadDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.mailTitle {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.starButton {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color var(--transition-speed);
+}
+
+.starButton:hover {
+  background-color: var(--background-secondary);
+}
+
+.starIcon {
+  color: var(--text-secondary);
+}
+
+.starIcon.starred {
+  color: #facc15;
+  fill: #facc15;
+}
+
+.chevron {
+  color: var(--text-secondary);
+  transition: transform var(--transition-speed);
+}
+
+.mailDate {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.mailContent {
+  color: var(--text-secondary);
+  padding: 0 8px;
+}
+
+.mailSubject {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin: 0 0 4px 0;
+}
+
+.mailBody {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  max-height: 3em;
+  overflow: hidden;
+  transition: max-height var(--transition-speed), opacity var(--transition-speed);
+  opacity: 0.7;
+}
+
+.mailBody.expanded {
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.mailTags {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 0 8px;
+}
+
+.tag {
+  padding: 2px 8px;
+  border-radius: 16px;
+  font-size: 0.75rem;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+}
