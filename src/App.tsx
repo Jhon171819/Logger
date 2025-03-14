@@ -19,7 +19,7 @@ function App() {
   });
 
   async function getMessages() {
-    fetch(`${process.env.SERVER_URL}/api/messages`)
+    fetch(`https://jonathancostamoura-imofsf13.b4a.run/api/messages`)
       .then(response => response.json())
       .then(data => {
         const formattedData = data.data.map(message => ({from: message.userEmail, body: message.content, date: moment(message.createdAt).format("DD/MM/YYYY")}))
