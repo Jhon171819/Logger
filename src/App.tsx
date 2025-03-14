@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
     // Initialize Socket.IO connection
-    const socketIo = io(`${import.meta.env.VITE_SERVER}`, {
+    const socketIo = io(`https://jonathancostamoura-imofsf13.b4a.run`, {
       transports: ['websocket'],
       autoConnect: true
     });
