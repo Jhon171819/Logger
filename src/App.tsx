@@ -19,7 +19,7 @@ function App() {
   });
 
   async function getMessages() {
-    fetch(`https://eb18edf4-e201-41d9-8869-d80b58a9e3ca-00-2jg76q2in5zvl.spock.replit.dev//api/messages`)
+    fetch(`https://eb18edf4-e201-41d9-8869-d80b58a9e3ca-00-2jg76q2in5zvl.spock.replit.dev/api/messages`)
       .then(response => response.json())
       .then(data => {
         const formattedData = data.data.map(message => ({from: message.userEmail, body: message.content, date: moment(message.createdAt).format("DD/MM/YYYY")}))
